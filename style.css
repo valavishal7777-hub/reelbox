@@ -1,0 +1,280 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: white;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: #1c1c1c;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.logo span {
+    color: #ff6b00;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff6b00;
+}
+
+
+/* Home Page Banner */
+
+.banner {
+    background-color: #222222;
+    padding: 60px 7%;
+}
+
+.banner h1 {
+    font-size: 40px;
+    color: #ff6b00;
+}
+
+.banner p {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6b00;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #ff6b00;
+}
+
+
+/* Home Page Sections */
+
+.section {
+    padding: 40px 7%;
+}
+
+.section h2 {
+    font-size: 28px;
+    border-left: 5px solid #ff6b00;
+    padding-left: 10px;
+}
+
+
+/* Home Featured Movies */
+
+.section .movie-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.section .movie-card {
+    background-color: #1c1c1c;
+    text-align: center;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding-bottom: 20px;
+}
+
+.section .movie-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.section .movie-card h3 {
+    font-size: 22px;
+}
+
+.section .movie-card p {
+    color: #cccccc;
+}
+
+.section .movie-card .btn {
+    margin-top: 10px;
+}
+
+
+/* Explore Genres */
+
+.genre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.genre-container a {
+    background-color: #1c1c1c;
+    color: white;
+    border: 1px solid #ff6b00;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.genre-container a:hover {
+    background-color: #ff6b00;
+}
+
+
+/* Movies Page */
+
+.movies-section {
+    padding: 40px 7%;
+}
+
+.movies-section h1 {
+    font-size: 38px;
+    color: #ff6b00;
+}
+
+.movies-section > p {
+    color: #cccccc;
+    font-size: 18px;
+}
+
+
+/* Search Bar */
+
+#searchInput {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0 40px;
+    background-color: #1c1c1c;
+    color: white;
+    border: 1px solid #ff6b00;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Movie Categories */
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h2 {
+    font-size: 28px;
+    border-left: 5px solid #ff6b00;
+    padding-left: 10px;
+}
+
+
+/* Movies Page Cards */
+
+.movies-section .movie-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.movies-section .movie-card {
+    background-color: #1c1c1c;
+    text-align: center;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding-bottom: 20px;
+}
+
+.movies-section .movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movies-section .movie-card h3 {
+    font-size: 20px;
+}
+
+.movies-section .movie-card p {
+    color: #cccccc;
+}
+
+.movies-section .movie-card a {
+    display: inline-block;
+    background-color: #ff6b00;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.movies-section .movie-card a:hover {
+    background-color: white;
+    color: #ff6b00;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1c1c1c;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Mobile Screen */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .section .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .movies-section .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section .movie-container {
+        grid-template-columns: 1fr;
+    }
+
+    .movies-section .movie-container {
+        grid-template-columns: 1fr;
+    }
+}
